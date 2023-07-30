@@ -5,9 +5,6 @@ import (
 	"goCache/Cache"
 )
 
-type NewMemCache struct {
-}
-
 func main() {
 	cache := Cache.NewMemCache()
 	cache.SetMaxMemory("200MB")

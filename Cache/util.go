@@ -5,6 +5,7 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+	"unsafe"
 )
 
 const (
@@ -50,5 +51,5 @@ func ParseSize(size string) (int64, string) {
 }
 
 func GetValueSize(val interface{}) int64 {
-	return 0
+	return int64(unsafe.Sizeof(val))
 }
